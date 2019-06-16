@@ -34,6 +34,10 @@ sls wsgi serve
     - serverless-plugin-warmup:
         * keep lambdas warm on a schedule
         * warm up after deployment      
+    - serverless-wsgi:
+        * maps AWS Api Gateway event to Flask
+        * integrates with serverless-plugin-warmup to
+        early exit when detecting a warm-up event
 ## What is missing?
 - [ ] serverless-offline does not seem to work with python
     custom authorizer.  we're currently already
