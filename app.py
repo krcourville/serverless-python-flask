@@ -12,11 +12,11 @@ USERS_TABLE = os.environ.get('USERS_TABLE', 'users-table-dev')
 IS_OFFLINE = os.environ.get('IS_OFFLINE', False)
 
 if IS_OFFLINE:
-  client = boto3.client(
-      'dynamodb',
-      region_name='localhost',
-      endpoint_url='http://localhost:8000'
-  )
+    client = boto3.client(
+        'dynamodb',
+        region_name='localhost',
+        endpoint_url='http://localhost:8000'
+    )
 else:
     client = boto3.client('dynamodb')
 
@@ -63,6 +63,7 @@ def create_user():
         'userId': user_id,
         'name': name
     })
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=3000)

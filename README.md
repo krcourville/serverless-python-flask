@@ -12,9 +12,6 @@ sls remove
 # install dynamodb local (do this one time)
 sls dynamodb install
 
-# start dynamodb
-sls dynamodb start
-
 # run local dev server
 sls wsgi serve
 ```
@@ -25,17 +22,29 @@ sls wsgi serve
 - [ ] Built-in support for `pipeenv`... unlike `aws sam`
 - [ ] Package and deploy in one step `sls deploy`
 - [ ] Documentation is MUCH better than that for `aws sam`
-- [ ] Local development (`aws sam` has this... but)
+- [ ] Local development (`aws sam` has this but with limitations)
 - [ ] plugins make local development a joy and not a chore
-    -  serverless-dynamodb-local
+    - serverless-dynamodb-local
+        * emulate dynamodb locally
+        * creates tables based on serverless config (we currently do 
+        this with our own script, and it's bugging/cumbersome)
+    - serverless-offline:
+        * emulate api gateway locally
+        * emulate custom authorizers (with a caveat..)
+    - serverless-plugin-warmup:
+        * keep lambdas warm on a schedule
+        * warm up after deployment      
+## What is missing?
+- [ ] serverless-offline does not seem to work with python
+    custom authorizer.  we're currently already
+    working around this, though. as a result, `serverless-offline`
+    is not useful right now
 
 ## Questions
 
 - [ ] How to change the deployed stack name?
 - [ ] "" function name?
-- [ ] running locally?
-- [ ] custom lambda 
-- [ ] VPC's!
+- [ ] custom lambda authorizer?
 - [ ] resource tags?
 
 ## References
