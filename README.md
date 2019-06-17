@@ -21,7 +21,7 @@ sls wsgi serve
 - [ ] Less cloudformation to manually maintain
 - [ ] Built-in support for `pipeenv`... unlike `aws sam`
 - [ ] Package and deploy in one step `sls deploy`
-- [ ] Documentation is MUCH better than that for `aws sam`
+- [ ] Documentation and community is MUCH better than that for `aws sam`
 - [ ] Local development (`aws sam` has this but with limitations)
 - [ ] plugins make local development a joy and not a chore
     - serverless-dynamodb-local
@@ -38,7 +38,9 @@ sls wsgi serve
         * maps AWS Api Gateway event to Flask
         * integrates with serverless-plugin-warmup to
         early exit when detecting a warm-up event
+        
 ## What is missing?
+
 - [ ] serverless-offline does not seem to work with python
     custom authorizer.  we're currently already
     working around this, though. as a result, `serverless-offline`
