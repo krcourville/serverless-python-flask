@@ -3,6 +3,9 @@
 ## Commands
 
 ```bash
+# install serverless plugins
+# npm install
+
 # deploy the ap
 sls deploy
 
@@ -48,6 +51,10 @@ we can use Serverless as a starting point if we want.
         * maps AWS Api Gateway event to Flask
         * integrates with serverless-plugin-warmup to
         early exit when detecting a warm-up event
+## Caveats
+
+* Additional prerequisite of nodejs
+
         
 ## References
 
