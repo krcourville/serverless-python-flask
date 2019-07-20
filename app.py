@@ -2,8 +2,8 @@
 
 from flask import Flask
 
-from resource.root import blp as root_resource
-from resource.users import blp as users_resource
+from resources.root import blp as root_resource
+from resources.users import blp as users_resource
 
 app = Flask(__name__)
 app.register_blueprint(root_resource)
