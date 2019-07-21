@@ -15,6 +15,9 @@ sls remove
 # install dynamodb local (do this one time)
 sls dynamodb install
 
+# start DynamoDB and create the table schema
+sls dynamodb start
+
 # run local dev server
 sls wsgi serve
 ```

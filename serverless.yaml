@@ -2,6 +2,7 @@ service: serverless-flask
 
 plugins:
   - serverless-python-requirements
+  - serverless-offline
   - serverless-dynamodb-local
   - serverless-plugin-warmup
   - serverless-wsgi
@@ -61,9 +62,9 @@ provider:
       - 'subnet-44e3d96e'
 
 functions:
-  auth:
-    handler: auth_handler.handle
-    cors: true
+#  auth:
+#    handler: auth_handler.handle
+#    cors: true
 
   getUser:
     handler: wsgi_handler.handler
@@ -75,7 +76,7 @@ functions:
           authorizer: auth
 
   createUser:
-    handler: wsgi_handler.handler
+#    handler: wsgi_handler.handler
     events:
       - http:
           path: '/users'

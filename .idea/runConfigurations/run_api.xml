@@ -5,6 +5,7 @@
     <option name="PARENT_ENVS" value="true" />
     <envs>
       <env name="PYTHONUNBUFFERED" value="1" />
+      <env name="IS_OFFLINE" value="true" />
     </envs>
     <option name="SDK_HOME" value="C:\Users\krcou_000\.virtualenvs\serverless-python-flask-MvIVfFA0\Scripts\python.exe" />
     <option name="WORKING_DIRECTORY" value="" />
